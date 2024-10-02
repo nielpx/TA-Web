@@ -12,31 +12,31 @@ const SidebarAdmin = () =>{
         <div className="flex h-screen flex-col bg-Splash bg-no-repeat bg-cover items-center">
           <hr className=" border-4 border-white mt-10 w-full" />
           <div className=" flex flex-col gap-3 mt-6 text-lg text-white items-start">
-            <div className=" hover:bg-hover-blue w-full">
+            <div className=" hover:bg-hover-blue w-full py-1">
                 <Link to="" className="flex items-center px-14">
-                    <FaHome className="mr-2" />
+                    <FaHome className="mr-2" size={25} />
                         Dashboard
                 </Link>
             </div>
-            <div className="hover:bg-hover-blue w-full">
+            <div className="hover:bg-hover-blue w-full py-1">
                 <Link to="" className="flex items-center px-14">
-                    <LiaClipboardListSolid className="mr-2" />
+                    <LiaClipboardListSolid className="mr-2" size={25} />
                         Data point
                 </Link>
             </div>
-            <div className="hover:bg-hover-blue w-full">
+            <div className="hover:bg-hover-blue w-full py-1">
               <a href="" className="flex items-center px-14 w-full">
-                <MdClass className="mr-2" />
+                <MdClass className="mr-2" size={25} />
                     Data Kelas & Jurusan
               </a>
             </div>
-            <div className="hover:bg-hover-blue w-full">
+            <div className="hover:bg-hover-blue w-full py-1">
               <a href="#" className="flex items-center px-14 w-full">
-                <PiStudentFill className="mr-2" />
+                <PiStudentFill className="mr-2" size={25}/>
                     Data Siswa
               </a>
             </div>
-            <div className="hover:bg-hover-blue w-full">
+            <div className="hover:bg-hover-blue w-full py-1">
               <a href="#" className="flex items-center px-14 w-full">
                 <FaChalkboardTeacher className="mr-2" />
                     Data Guru
