@@ -1,8 +1,7 @@
 import Sidebar from "../components/Sidebar"
 import { FaRegBell } from "react-icons/fa";
 import { TbLogout } from "react-icons/tb";
-//☆*: .｡. o(≧▽≦)o .｡.:*☆
-//
+
 const RiwayatSiswa = () =>{
     return(
         <div className="flex items-center justify-center w-full h-screen font-Ubuntu" >
@@ -16,8 +15,47 @@ const RiwayatSiswa = () =>{
                             <TbLogout size={23} />
                         </div>
                     </div>
+                    <div className="flex items-center justify-around border-b-4 border-blue-200  w-full bg-white mt-5">
+                        <h1 className="py-4 text-xl font-bold pl-1">Nama Point Laporan</h1>
+                        <h1 className="py-4 mr-16 text-xl font-bold pl-[428px]">Status</h1>
+                    </div>
                     <div className=" overflow-auto h-[600px]">
-                        <div className="w-full h-screen bg-white"></div>
+                        <div className="w-full h-screen bg-white p-5">
+                            <table className="w-full text-lg">
+                                <tbody>
+                                    <tr className="border-b-2 border-blue-100 ">
+                                        <td className="font-medium ">
+                                            <span>Mengerjakan tugas selama satu semester</span>
+                                            <br />
+                                            <span className="text-sm align-top text-font-gray">
+                                                Tanggal : 10-10-24 09:30
+                                            </span>
+                                        </td>
+                                        <td className="text-light-green pl-[25vw]">Di terima</td>
+                                    </tr>
+                                    <tr className="border-b-2 border-blue-100 ">
+                                        <td className="font-medium w-1/2 ">
+                                            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo beatae ad quae qui? Nesciunt, adipisci consequuntur mollitia sed enim accusantium. Est incidunt aspernatur assumenda ab commodi quidem sapiente velit neque!</span>
+                                            <br />
+                                            <span className="text-sm align-top text-font-gray">
+                                                Tanggal : 10-10-24 09:30
+                                            </span>
+                                        </td>
+                                        <td className="text-bright-red pl-[25vw]">Di tolak</td>
+                                    </tr>
+                                    <tr className="border-b-2 border-blue-100 ">
+                                        <td className="font-medium w-1/2 ">
+                                            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo beatae ad quae qui? Nesciunt, adipisci consequuntur mollitia sed enim accusantium. Est incidunt aspernatur assumenda ab commodi quidem sapiente velit neque!</span>
+                                            <br />
+                                            <span className="text-sm align-top text-font-gray">
+                                                Tanggal : 10-10-24 09:30
+                                            </span>
+                                        </td>
+                                        <td className="text-strong-blue pl-[25vw]">Di proses</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>   
             </div>
