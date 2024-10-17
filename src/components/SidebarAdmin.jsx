@@ -13,13 +13,13 @@ const SidebarAdmin = () =>{
           <hr className=" border-4 border-white mt-10 w-full" />
           <div className=" flex flex-col gap-3 mt-6 text-lg text-white items-start">
             <div className=" hover:bg-hover-blue w-full py-1">
-                <Link to="" className="flex items-center px-14">
+                <Link to="/dashboardadmin" className="flex items-center px-14">
                     <FaHome className="mr-2" size={25} />
                         Dashboard
                 </Link>
             </div>
             <div className="hover:bg-hover-blue w-full py-1">
-                <Link to="" className="flex items-center px-14">
+                <Link to="datapointadmin" className="flex items-center px-14">
                     <LiaClipboardListSolid className="mr-2" size={25} />
                         Data point
                 </Link>
