@@ -26,7 +26,11 @@ const Sidebar = () =>{
             </div>
             <div className="hover:bg-hover-blue w-full">
 <<<<<<< HEAD
+<<<<<<< HEAD
               <a href="/LaporanSiswa" className="flex items-center px-14 w-full">
+=======
+              <Link to="/laporansiswa" className="flex items-center px-14 w-full">
+>>>>>>> f74a7a6a10fde0c6d2c5b09809f4f8de46e70022
 =======
               <Link to="/laporansiswa" className="flex items-center px-14 w-full">
 >>>>>>> f74a7a6a10fde0c6d2c5b09809f4f8de46e70022
