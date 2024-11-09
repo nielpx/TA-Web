@@ -4,7 +4,7 @@ import { TbLogout } from "react-icons/tb";
 
 import SidebarAdmin from "../components/SidebarAdmin";
 
-
+//admin
 
 export default function DashboardAdmin() {
 
