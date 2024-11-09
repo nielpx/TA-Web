@@ -15,6 +15,7 @@ export default function LoginSiswa() {
         alert(`Hallo, ${response.data.nama}`)
         window.localStorage.setItem("token", response.data.token) 
         navigate("/dashboard")
+        window.location.reload()
       }     
     } catch(e) {
       alert(e.response.data.message)

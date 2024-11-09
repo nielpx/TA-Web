@@ -12,7 +12,7 @@ export default function DashboardSiswa() {
   useEffect(() => {
     BaseURL.get("api/Auth/me")
       .then((response) => {
-        setData(response.data)
+        setData(response.data)        
       })
       .catch((e) => {
 
