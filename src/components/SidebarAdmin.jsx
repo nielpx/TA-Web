@@ -9,7 +9,7 @@ import { FaChalkboardTeacher } from "react-icons/fa";
 
 const SidebarAdmin = () =>{
     return(
-        <div className="flex h-screen flex-col bg-Splash bg-no-repeat bg-cover items-center">
+        <div className="flex h-screen flex-col bg-no-repeat bg-cover bg-splash items-center">
           <hr className=" border-4 border-white mt-10 w-full" />
           <div className=" flex flex-col gap-3 mt-6 text-lg text-white items-start">
             <div className=" hover:bg-hover-blue w-full py-1">
@@ -19,7 +19,7 @@ const SidebarAdmin = () =>{
                 </Link>
             </div>
             <div className="hover:bg-hover-blue w-full py-1">
-                <Link to="datapointadmin" className="flex items-center px-14">
+                <Link to="/datapointadmin" className="flex items-center px-14">
                     <LiaClipboardListSolid className="mr-2" size={25} />
                         Data point
                 </Link>

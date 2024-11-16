@@ -58,7 +58,7 @@ export default function LoginSiswa() {
             </div>
           </div>
         </div>
-        <div className=" flex flex-col h-screen w-full items-center justify-center bg-Splash bg-no-repeat bg-cover bg-[center]">
+        <div className=" flex flex-col h-screen w-full items-center justify-center bg-splash bg-no-repeat bg-cover bg-[center]">
           <img src={Logo} alt="logo" className="w-[35%]" />
           <h1 className="text-5xl w-[80%] text-center font-bold text-white mt-11 ">
             Aplikasi Buku Poin Prestasi <span>SMKN 2 Singosari</span>

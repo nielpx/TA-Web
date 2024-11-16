@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage:{
-        'Splash': "url('./pictures/SplashScreen.png')",
+        'splash': "url('./pictures/SplashScreen.png') !important",
       },
       fontFamily: {
         'Ubuntu' : [ "Ubuntu", "sans-serif"],

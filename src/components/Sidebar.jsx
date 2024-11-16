@@ -9,7 +9,7 @@ import DashboardSiswa from "../pages/DashboardSiswa";
 
 const Sidebar = () =>{
     return(
-        <div className="flex h-screen flex-col bg-Splash bg-no-repeat bg-cover items-center">
+        <div className="flex h-screen flex-col bg-plash bg-no-repeat bg-cover items-center">
           <hr className=" border-4 border-white mt-10 w-full" />
           <div className=" flex flex-col gap-3 mt-6 text-lg text-white items-start">
             <div className=" hover:bg-hover-blue">
@@ -25,15 +25,7 @@ const Sidebar = () =>{
                 </Link>
             </div>
             <div className="hover:bg-hover-blue w-full">
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <a href="/LaporanSiswa" className="flex items-center px-14 w-full">
-=======
               <Link to="/laporansiswa" className="flex items-center px-14 w-full">
->>>>>>> f74a7a6a10fde0c6d2c5b09809f4f8de46e70022
-=======
-              <Link to="/laporansiswa" className="flex items-center px-14 w-full">
->>>>>>> f74a7a6a10fde0c6d2c5b09809f4f8de46e70022
                 <FaFile className="mr-2" />
                     Laporan
               </Link>
