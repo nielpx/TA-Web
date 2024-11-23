@@ -25,10 +25,10 @@ const SidebarAdmin = () =>{
                 </Link>
             </div>
             <div className="hover:bg-hover-blue w-full py-1">
-              <a href="" className="flex items-center px-14 w-full">
+              <Link to="/datajurusandankelasadmin" className="flex items-center px-14">
                 <MdClass className="mr-2" size={25} />
                     Data Kelas & Jurusan
-              </a>
+              </Link>
             </div>
             <div className="hover:bg-hover-blue w-full py-1">
               <a href="#" className="flex items-center px-14 w-full">

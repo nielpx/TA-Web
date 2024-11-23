@@ -9,7 +9,7 @@ import DashboardSiswa from "../pages/DashboardSiswa";
 
 const Sidebar = () =>{
     return(
-        <div className="flex h-screen flex-col bg-plash bg-no-repeat bg-cover items-center">
+        <div className="flex h-screen flex-col bg-splash bg-no-repeat bg-cover items-center">
           <hr className=" border-4 border-white mt-10 w-full" />
           <div className=" flex flex-col gap-3 mt-6 text-lg text-white items-start">
             <div className=" hover:bg-hover-blue">
