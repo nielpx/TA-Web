@@ -17,6 +17,11 @@ export default function DataJurusanDanKelasAdmin(){
         bc: false,
         an:false
       });
+
+      const [showPopupUbahKelas, setShowPopupUbahKelas] = useState(false);
+      const [showPopupUbahJurusan, setShowPopupUbahJurusan] = useState(false);
+      const [showPopupTambahKelas, setShowPopupTambahKelas] = useState(false);
+      const [showPopupTambahJurusan, setShowPopupTambahJurusan] = useState(false);  
     
       const toggleDropdown = (key) => {
         setDropdownState((prevState) => ({
@@ -24,6 +29,38 @@ export default function DataJurusanDanKelasAdmin(){
           [key]: !prevState[key], // Toggle dropdown sesuai key
         }));
       };
+
+      const handlePopupUbahKelas = () => {
+        setShowPopupUbahKelas(true); // Tampilkan pop-up
+      };
+
+      const closePopupUbahKelas = () => {
+        setShowPopupUbahKelas(false); // Sembunyikan pop-up
+      }
+
+      const handlePopupUbahJurusan = () => {
+        setShowPopupUbahJurusan(true); // Tampilkan pop-up
+      };
+
+      const closePopupUbahJurusan = () => {
+        setShowPopupUbahJurusan(false);
+      }
+
+      const handlePopupTambahKelas = () => {
+        setShowPopupTambahKelas(true);
+      };
+
+      const closePopupTambahKelas= () => {
+        setShowPopupTambahKelas(false);
+      }
+
+      const handlePopupTambahJurusan = () => {
+        setShowPopupTambahJurusan(true);
+      };
+
+      const closePopupTambahJurusan= () => {
+        setShowPopupTambahJurusan(false);
+      }
     return(
         <div className="flex items-center justify-center w-full font-Ubuntu" >
             <SidebarAdmin/>
@@ -36,208 +73,142 @@ export default function DataJurusanDanKelasAdmin(){
                             <TbLogout size={23} />
                         </div>
                     </div> 
-                    <div className="flex gap-1">
-                        <div className="w-1/2 flex flex-col py-3 gap-2">
-                        {/* erpeel */}
-                            <div className=" w-full flex flex-col justify-between bg-white">
-                                <div className="flex justify-between items-center cursor-pointer p-4" onClick={() => toggleDropdown("rpl")}>
-                                    <h3 className="font-semibold">Rekayasa Perangkat Lunak</h3>
-                                    <span className={`text-xl transform transition-transform ${dropdownState.rpl ? "rotate-90" : ""}`}><IoIosArrowForward/></span>
-                                </div>
-                                <div className={`${dropdownState.rpl ? "block" : "hidden"}`}>
-                                    <div>
-                                        <div className="px-4 py-2 border-t flex items-center justify-between">
-                                            <span className="flex-grow">XI RPL 1</span>
-                                            <div className="space-x-2">
-                                                <button><BiSolidEdit size={23}/></button>
-                                                <button><RiDeleteBin6Line size={23}/></button>
-                                            </div>
+                    <div className="w-full p-5 overflow-y-scroll h-[85vh] bg-milk-blue">
+                        <div className="flex gap-1">
+                            <div className="w-1/2 flex flex-col py-3 gap-2">
+                            {/* erpeel */}
+                                <div className=" w-full flex flex-col justify-between bg-white">
+                                    <div className="flex justify-between items-center p-4">
+                                        <h3 className="font-semibold">Rekayasa Perangkat Lunak</h3>
+                                        <div className="flex items-center justify-between w-14">
+                                            <button onClick={handlePopupUbahJurusan}><BiSolidEdit size={23}/></button>
+                                            <button className={`text-xl transform transition-transform cursor-pointer ${dropdownState.rpl ? "rotate-90" : ""}`}onClick={() => toggleDropdown("rpl")}><IoIosArrowForward/></button>
                                         </div>
                                     </div>
-                                    <div>
-                                        <div className="px-4 py-2 border-t flex items-center justify-between">
-                                            <span className="flex-grow">XI RPL 2</span>
-                                            <div className="space-x-2">
-                                                <button><BiSolidEdit size={23}/></button>
-                                                <button><RiDeleteBin6Line size={23}/></button>
+                                    <div className={`${dropdownState.rpl ? "block" : "hidden"}`}>
+                                        <div>
+                                            <div className="px-4 py-2 border-t flex items-center justify-between">
+                                                <span className="flex-grow">XI RPL 1</span>
+                                                <div className="space-x-2">
+                                                    <button onClick={handlePopupUbahKelas}><BiSolidEdit size={23}/></button>
+                                                    <button><RiDeleteBin6Line size={23}/></button>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <button className="w-full px-4 py-2 border-t flex items-center justify-end">+</button>
-                                </div>
-                            </div>
-                            {/* tkj */}
-                            <div className=" w-full flex flex-col justify-between bg-white">
-                                <div className="flex justify-between items-center cursor-pointer p-4" onClick={() => toggleDropdown("tkj")}>
-                                    <h3 className="font-semibold">Teknik Komputer Jaringan</h3>
-                                    <span className={`text-xl transform transition-transform ${dropdownState.tkj ? "rotate-90" : ""}`}><IoIosArrowForward/></span>
-                                </div>
-                                <div className={`${dropdownState.tkj ? "block" : "hidden"}`}>
-                                    <div>
-                                        <div className="px-4 py-2 border-t flex items-center justify-between">
-                                            <span className="flex-grow">XI TKJ 1</span>
-                                            <div className="space-x-2">
-                                                <button><BiSolidEdit size={23}/></button>
-                                                <button><RiDeleteBin6Line size={23}/></button>
+                                        <div>
+                                            <div className="px-4 py-2 border-t flex items-center justify-between">
+                                                <span className="flex-grow">XI RPL 2</span>
+                                                <div className="space-x-2">
+                                                    <button onClick={handlePopupUbahKelas}><BiSolidEdit size={23}/></button>
+                                                    <button><RiDeleteBin6Line size={23}/></button>
+                                                </div>
                                             </div>
                                         </div>
+                                        <button onClick={handlePopupTambahKelas} className="w-full px-4 py-2 border-t flex items-center justify-end">+</button>
                                     </div>
-                                    <div>
-                                        <div className="px-4 py-2 border-t flex items-center justify-between">
-                                            <span className="flex-grow">XI TKJ 2</span>
-                                            <div className="space-x-2">
-                                                <button><BiSolidEdit size={23}/></button>
-                                                <button><RiDeleteBin6Line size={23}/></button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <button className="w-full px-4 py-2 border-t flex items-center justify-end">+</button>
                                 </div>
                             </div>
-                            {/* dekave */}
-                            <div className=" w-full flex flex-col justify-between bg-white">
-                                <div className="flex justify-between items-center cursor-pointer p-4" onClick={() => toggleDropdown("dkv")}>
-                                    <h3 className="font-semibold">Desain Komunikasi Visual</h3>
-                                    <span className={`text-xl transform transition-transform ${dropdownState.dkv ? "rotate-90" : ""}`}><IoIosArrowForward/></span>
-                                </div>
-                                <div className={`${dropdownState.dkv ? "block" : "hidden"}`}>
-                                    <div>
-                                        <div className="px-4 py-2 border-t flex items-center justify-between">
-                                            <span className="flex-grow">XI DKV 1</span>
-                                            <div className="space-x-2">
-                                                <button><BiSolidEdit size={23}/></button>
-                                                <button><RiDeleteBin6Line size={23}/></button>
-                                            </div>
+                            {/* kanan */}
+                            <div className="w-1/2 flex flex-col py-3 gap-2">
+                                <div className=" w-full flex flex-col justify-between bg-white">
+                                    <div className="flex justify-between items-center p-4">
+                                        <h3 className="font-semibold" onClick={() => toggleDropdown("ei")}>Elektronika Industri</h3>
+                                        <div className="flex items-center justify-between w-14">
+                                            <button onClick={handlePopupUbahJurusan}><BiSolidEdit size={23}/></button>
+                                            <span className={`text-xl transform transition-transform cursor-pointer ${dropdownState.ei ? "rotate-90" : ""}`} onClick={() => toggleDropdown("ei")}><IoIosArrowForward/></span>
                                         </div>
                                     </div>
-                                    <div>
-                                        <div className="px-4 py-2 border-t flex items-center justify-between">
-                                            <span className="flex-grow">XI DKV 2</span>
-                                            <div className="space-x-2">
-                                                <button><BiSolidEdit size={23}/></button>
-                                                <button><RiDeleteBin6Line size={23}/></button>
+                                    <div className={`${dropdownState.ei ? "block" : "hidden"}`}>
+                                        <div>
+                                            <div className="px-4 py-2 border-t flex items-center justify-between">
+                                                <span className="flex-grow">XI EI 1</span>
+                                                <div className="space-x-2">
+                                                    <button onClick={handlePopupUbahKelas}><BiSolidEdit size={23}/></button>
+                                                    <button><RiDeleteBin6Line size={23}/></button>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <button className="w-full px-4 py-2 border-t flex items-center justify-end">+</button>
-                                </div>
-                            </div>
-                            <div className=" w-full flex flex-col justify-between bg-white">
-                                <div className="flex justify-between items-center cursor-pointer p-4" onClick={() => toggleDropdown("mt")}>
-                                    <h3 className="font-semibold">Mekatronika</h3>
-                                    <span className={`text-xl transform transition-transform ${dropdownState.mt ? "rotate-90" : ""}`}><IoIosArrowForward/></span>
-                                </div>
-                                <div className={`${dropdownState.mt ? "block" : "hidden"}`}>
-                                    <div>
-                                        <div className="px-4 py-2 border-t flex items-center justify-between">
-                                            <span className="flex-grow">XI MT 1</span>
-                                            <div className="space-x-2">
-                                                <button><BiSolidEdit size={23}/></button>
-                                                <button><RiDeleteBin6Line size={23}/></button>
+                                        <div>
+                                            <div className="px-4 py-2 border-t flex items-center justify-between">
+                                                <span className="flex-grow">XI EI 2</span>
+                                                <div className="space-x-2">
+                                                    <button onClick={handlePopupUbahKelas}><BiSolidEdit size={23}/></button>
+                                                    <button><RiDeleteBin6Line size={23}/></button>
+                                                </div>
                                             </div>
                                         </div>
+                                        <button onClick={handlePopupTambahKelas} className="w-full px-4 py-2 border-t flex items-center justify-end">+</button>
                                     </div>
-                                    <div>
-                                        <div className="px-4 py-2 border-t flex items-center justify-between">
-                                            <span className="flex-grow">XI MT 2</span>
-                                            <div className="space-x-2">
-                                                <button><BiSolidEdit size={23}/></button>
-                                                <button><RiDeleteBin6Line size={23}/></button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <button className="w-full px-4 py-2 border-t flex items-center justify-end">+</button>
-                                </div>
-                            </div>
-                        </div>
-                        {/* kanan */}
-                        <div className="w-1/2 flex flex-col py-3 gap-2">
-                            <div className=" w-full flex flex-col justify-between bg-white">
-                                <div className="flex justify-between items-center cursor-pointer p-4" onClick={() => toggleDropdown("ei")}>
-                                    <h3 className="font-semibold">Elektronika Industri</h3>
-                                    <span className={`text-xl transform transition-transform ${dropdownState.ei ? "rotate-90" : ""}`}><IoIosArrowForward/></span>
-                                </div>
-                                <div className={`${dropdownState.ei ? "block" : "hidden"}`}>
-                                    <div>
-                                        <div className="px-4 py-2 border-t flex items-center justify-between">
-                                            <span className="flex-grow">XI EI 1</span>
-                                            <div className="space-x-2">
-                                                <button><BiSolidEdit size={23}/></button>
-                                                <button><RiDeleteBin6Line size={23}/></button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div className="px-4 py-2 border-t flex items-center justify-between">
-                                            <span className="flex-grow">XI EI 2</span>
-                                            <div className="space-x-2">
-                                                <button><BiSolidEdit size={23}/></button>
-                                                <button><RiDeleteBin6Line size={23}/></button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <button className="w-full px-4 py-2 border-t flex items-center justify-end">+</button>
-                                </div>
-                            </div>
-                            {/* brodkesting */}
-                            <div className=" w-full flex flex-col justify-between bg-white">
-                                <div className="flex justify-between items-center cursor-pointer p-4" onClick={() => toggleDropdown("bc")}>
-                                    <h3 className="font-semibold">Brodcasting</h3>
-                                    <span className={`text-xl transform transition-transform ${dropdownState.bc ? "rotate-90" : ""}`}><IoIosArrowForward/></span>
-                                </div>
-                                <div className={`${dropdownState.bc ? "block" : "hidden"}`}>
-                                    <div>
-                                        <div className="px-4 py-2 border-t flex items-center justify-between">
-                                            <span className="flex-grow">XI BC 1</span>
-                                            <div className="space-x-2">
-                                                <button><BiSolidEdit size={23}/></button>
-                                                <button><RiDeleteBin6Line size={23}/></button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div className="px-4 py-2 border-t flex items-center justify-between">
-                                            <span className="flex-grow">XI BC 2</span>
-                                            <div className="space-x-2">
-                                                <button><BiSolidEdit size={23}/></button>
-                                                <button><RiDeleteBin6Line size={23}/></button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <button className="w-full px-4 py-2 border-t flex items-center justify-end">+</button>
-                                </div>
-                            </div>
-                            {/* animasi */}
-                            <div className=" w-full flex flex-col justify-between bg-white">
-                                <div className="flex justify-between items-center cursor-pointer p-4" onClick={() => toggleDropdown("an")}>
-                                    <h3 className="font-semibold">Animasi</h3>
-                                    <span className={`text-xl transform transition-transform ${dropdownState.an ? "rotate-90" : ""}`}><IoIosArrowForward/></span>
-                                </div>
-                                <div className={`${dropdownState.an ? "block" : "hidden"}`}>
-                                    <div>
-                                        <div className="px-4 py-2 border-t flex items-center justify-between">
-                                            <span className="flex-grow">XI AN 1</span>
-                                            <div className="space-x-2">
-                                                <button><BiSolidEdit size={23}/></button>
-                                                <button><RiDeleteBin6Line size={23}/></button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div className="px-4 py-2 border-t flex items-center justify-between">
-                                            <span className="flex-grow">XI AN 2</span>
-                                            <div className="space-x-2">
-                                                <button><BiSolidEdit size={23}/></button>
-                                                <button><RiDeleteBin6Line size={23}/></button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <button className="w-full px-4 py-2 border-t flex items-center justify-end">+</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>   
+                </div>
+                <button onClick={handlePopupTambahJurusan} className="fixed bottom-10 right-36 px-5 py-2 text-5xl bg-strong-blue rounded-full text-white">+</button> 
+                {showPopupUbahKelas && (
+                    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+                        <div className="bg-white w-1/3 text-center flex flex-col justify-between h-[35vh]">
+                            <h1 className="py-3 w-full bg-strong-blue text-white font-semibold">Ubah Kelas</h1>
+                            <form className="w-full h-[20vh] flex flex-col items-center justify-between">
+                                <div className="w-[80%]">
+                                    <input type="text" name="" id="" placeholder="Nama kelas" className=" border-2 border-font-gray bg-gray rounded-sm w-full py-1 pl-2 placeholder:pl-2" />
+                                </div>
+                                <div className="w-[95%] flex items-center justify-between gap-5 pb-3">
+                                    <button type="button" className="py-1 w-1/2 bg-none border-2 border-strong-blue rounded-md" onClick={closePopupUbahKelas}>Kembali</button>
+                                    <button type="submit" className="py-1 w-1/2 bg-none border-2 border-light-green rounded-md">Simpan</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                )}
+                {showPopupUbahJurusan && (
+                    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+                        <div className="bg-white w-1/3 text-center flex flex-col justify-between h-[35vh]">
+                            <div className="py-3 w-full bg-strong-blue text-white font-semibold">Ubah Jurusan</div>
+                            <form className="w-full h-[20vh] flex flex-col items-center justify-between">
+                                <div className="w-[80%]">
+                                    <input type="text" name="" id="" placeholder="Nama jurusan" className=" border-2 border-font-gray bg-gray rounded-sm w-full py-1 pl-2 placeholder:pl-2" />
+                                </div>
+                                <div className="w-[95%] flex items-center justify-between gap-5 pb-3">
+                                    <button type="button" className="py-1 w-1/2 bg-none border-2 border-strong-blue rounded-md" onClick={closePopupUbahJurusan}>Kembali</button>
+                                    <button type="submit" className="py-1 w-1/2 bg-none border-2 border-light-green rounded-md">Simpan</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                )}
+                {showPopupTambahKelas && (
+                    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+                        <div className="bg-white w-1/3 text-center flex flex-col justify-between h-[35vh]">
+                            <div className="py-3 w-full bg-strong-blue text-white font-semibold">Tambah Kelas</div>
+                            <form className="w-full h-[20vh] flex flex-col items-center justify-between">
+                                <div className="w-[80%]">
+                                    <input type="text" name="" id="" placeholder="Nama kelas" className=" border-2 border-font-gray bg-gray rounded-sm w-full py-1 pl-2 placeholder:pl-2" />
+                                </div>
+                                <div className="w-[95%] flex items-center justify-between gap-5 pb-3">
+                                    <button type="button" className="py-1 w-1/2 bg-none border-2 border-strong-blue rounded-md" onClick={closePopupTambahKelas}>Kembali</button>
+                                    <button type="submit" className="py-1 w-1/2 bg-none border-2 border-light-green rounded-md">Tambah</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                )}
+                {showPopupTambahJurusan && (
+                    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+                        <div className="bg-white w-1/3 text-center flex flex-col justify-between h-[35vh]">
+                            <div className="py-3 w-full bg-strong-blue text-white font-semibold">Tambah Jurusan</div>
+                            <form className="w-full h-[20vh] flex flex-col items-center justify-between">
+                                <div className="w-[80%]">
+                                    <input type="text" name="" id="" placeholder="Nama kelas" className=" border-2 border-font-gray bg-gray rounded-sm w-full py-1 pl-2 placeholder:pl-2" />
+                                </div>
+                                <div className="w-[95%] flex items-center justify-between gap-5 pb-3">
+                                    <button type="button" className="py-1 w-1/2 bg-none border-2 border-strong-blue rounded-md" onClick={closePopupTambahJurusan}>Kembali</button>
+                                    <button type="submit" className="py-1 w-1/2 bg-none border-2 border-light-green rounded-md">Tambah</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                )}
             </div>
         </div>
     )
