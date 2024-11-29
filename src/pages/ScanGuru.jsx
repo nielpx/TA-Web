@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { FaRegBell } from "react-icons/fa";
 import { TbLogout } from "react-icons/tb";
 import BaseURL from "../utils/axios";
 import SidebarGuru from "../components/SidebarGuru";
@@ -27,8 +26,7 @@ export default function ScanGuru() {
             <div className="flex items-center justify-between w-full px-5 border-b-2 pb-3">
               <h1 className="text-xl font-medium">{data?.nama ?? "Annonymous"}</h1>
               <div className=" flex items-center gap-6">
-                <FaRegBell size={23} />
-                <TbLogout size={23} />
+                <button><TbLogout size={23} /></button>
               </div>
             </div>
             <div className="flex flex-col items-center justify-between w-full bg-white mt-5 h-[640px]">

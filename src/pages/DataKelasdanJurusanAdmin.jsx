@@ -69,8 +69,7 @@ export default function DataJurusanDanKelasAdmin(){
                     <div className="flex items-center justify-between w-full px-5 border-b-2 pb-3">
                         <h1 className="text-xl font-medium">Admin</h1>
                         <div className=" flex items-center gap-6">
-                            <FaRegBell size={23} />
-                            <TbLogout size={23} />
+                            <div><TbLogout size={23} /></div>
                         </div>
                     </div> 
                     <div className="w-full p-5 overflow-y-scroll h-[85vh] bg-milk-blue">

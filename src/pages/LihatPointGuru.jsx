@@ -1,4 +1,4 @@
-import SidebarAdmin from "../components/SidebarAdmin";
+import SidebarAdmin from "../components/SidebarGuru";
 import { TbLogout } from "react-icons/tb";
 import { IoIosSearch } from "react-icons/io";
 import { BiSolidEdit } from "react-icons/bi";
@@ -6,7 +6,7 @@ import { RiDeleteBin6Line } from "react-icons/ri";
 import { useState } from "react";
 
 
-export default function DataPointAdmin(){
+export default function LihatPointGuru(){
 
     const [showPopupUbahPoint, setShowPopupUbahPoint] = useState(false);
     const handlePopupUbahPoint = () => {
@@ -32,7 +32,7 @@ export default function DataPointAdmin(){
             <div className="h-screen w-full bg-milk-blue">
                 <div className="p-9">
                     <div className="flex items-center justify-between w-full px-5 border-b-2 pb-3">
-                        <h1 className="text-xl font-medium">Admin</h1>
+                        <h1 className="text-xl font-medium">tes</h1>
                         <div className=" flex items-center gap-6">
                             <button><TbLogout size={23} /></button>
                         </div>
@@ -70,7 +70,7 @@ export default function DataPointAdmin(){
                                 </table>
                                 <table className="w-full">
                                     <tr>
-                                        <td className="leading-4 py-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit aspernatur quod impedit neque tempore iusto nobis veniam dignissimos aliquid quam unde alias, quibusdam id ipsa iure commodi libero facere sint? <br /><span className="text-slate-500 text-sm">Point : 15</span></td>
+                                        <td className="leading-4 py-2">Makan bakso <br /><span className="text-slate-500 text-sm">Point : 15</span></td>
                                         <td className="text-center w-20">
                                             <button onClick={handlePopupUbahPoint}><BiSolidEdit size={23}/> </button>
                                         </td>

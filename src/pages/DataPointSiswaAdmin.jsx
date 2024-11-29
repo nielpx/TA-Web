@@ -1,5 +1,4 @@
 import SidebarAdmin from "../components/SidebarAdmin";
-import { FaRegBell } from "react-icons/fa";
 import { TbLogout } from "react-icons/tb";
 import { BiSolidEdit } from "react-icons/bi";
 import { RiDeleteBin6Line } from "react-icons/ri";
@@ -32,8 +31,7 @@ export default function DataPointSiswaAdmin(){
                     <div className="flex items-center justify-between w-full px-5 border-b-2 pb-3">
                         <h1 className="text-xl font-medium">Admin</h1>
                         <div className=" flex items-center gap-6">
-                            <FaRegBell size={23} />
-                            <TbLogout size={23} />
+                            <div><TbLogout size={23} /></div>
                         </div>
                     </div>
                     <div className="w-full flex py-3 gap-2">

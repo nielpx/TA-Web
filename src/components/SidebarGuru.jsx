@@ -31,7 +31,7 @@ const SidebarGuru = () =>{
               </Link>
             </div>
             <div className="hover:bg-hover-blue w-full py-1">
-              <Link to="" className="flex items-center px-14 w-full">
+              <Link to="/lihatpointguru" className="flex items-center px-14 w-full">
                 <CiBoxList className="mr-2" size={25} />
                     Lihat Poin
               </Link>

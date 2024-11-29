@@ -14,11 +14,13 @@ import DataPointAdmin from "../pages/DataPointAdmin"
 import DataJurusanDanKelasAdmin from "../pages/DataKelasdanJurusanAdmin.jsx"
 import DataSiswaAdmin from "../pages/DataSiswaAdmin.jsx"
 import DataPointSiswaAdmin from "../pages/DataPointSiswaAdmin.jsx"
+import DataGuruAdmin from "../pages/DataGuruAdmin.jsx"
+import LihatPointGuru from "../pages/LihatPointGuru.jsx"
 
 
 const route = createBrowserRouter([
   {
-    path: "/",
+    path: "/loginsiswa",
     element: <LoginSiswa/>
   },
   {
@@ -76,6 +78,14 @@ const route = createBrowserRouter([
   {
     path: "/datapointsiswaadmin",
     element: <DataPointSiswaAdmin/>
+  },
+  {
+    path: "/dataguruadmin",
+    element: <DataGuruAdmin/>
+  },
+  {
+    path: "/lihatpointguru",
+    element: <LihatPointGuru/>
   },
 ])
 

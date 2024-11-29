@@ -37,10 +37,10 @@ const SidebarAdmin = () =>{
               </Link>
             </div>
             <div className="hover:bg-hover-blue w-full py-1">
-              <a href="#" className="flex items-center px-14 w-full">
+              <Link to="/dataguruadmin" className="flex items-center px-14 w-full">
                 <FaChalkboardTeacher className="mr-2" />
                     Data Guru
-              </a>
+              </Link>
             </div>
           </div>
           <img src={Logo} alt="logo" className="w-20 mt-auto mb-7" />

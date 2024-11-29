@@ -18,8 +18,8 @@ const Sidebar = () =>{
                     Dashboard
                 </Link>
             </div>
-            <div className=" hover:bg-hover-blue">
-                <Link to="/scan" className="flex items-center px-14">
+            <div className=" hover:bg-hover-blue w-full">
+                <Link to="/scan" className="flex items-center px-14 w-full">
                     <FaBarcode className="mr-2" />
                         Scan
                 </Link>
