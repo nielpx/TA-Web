@@ -19,6 +19,7 @@ module.exports = {
         'gray' : '#CDDDEA',
         'font-gray' : '#939191'
       },
+      
     },
   },
   plugins: [],

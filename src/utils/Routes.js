@@ -11,8 +11,9 @@ import LaporanGuru from "../pages/LaporanGuru"
 import RiwayatGuru from "../pages/RiwayatGuru"
 import DashboardAdmin from "../pages/DashboardAdmin"
 import DataPointAdmin from "../pages/DataPointAdmin"
-import DataJurusanDanKelas from "../pages/DataKelasdanJurusanAdmin.jsx"
 import DataJurusanDanKelasAdmin from "../pages/DataKelasdanJurusanAdmin.jsx"
+import DataSiswaAdmin from "../pages/DataSiswaAdmin.jsx"
+import DataPointSiswaAdmin from "../pages/DataPointSiswaAdmin.jsx"
 
 
 const route = createBrowserRouter([
@@ -67,6 +68,14 @@ const route = createBrowserRouter([
   {
     path: "/datajurusandankelasadmin",
     element: <DataJurusanDanKelasAdmin/>
+  },
+  {
+    path: "/datasiswaadmin",
+    element: <DataSiswaAdmin/>
+  },
+  {
+    path: "/datapointsiswaadmin",
+    element: <DataPointSiswaAdmin/>
   },
 ])
 

@@ -31,10 +31,10 @@ const SidebarAdmin = () =>{
               </Link>
             </div>
             <div className="hover:bg-hover-blue w-full py-1">
-              <a href="#" className="flex items-center px-14 w-full">
+              <Link to="/datasiswaadmin" className="flex items-center px-14 w-full">
                 <PiStudentFill className="mr-2" size={25}/>
                     Data Siswa
-              </a>
+              </Link>
             </div>
             <div className="hover:bg-hover-blue w-full py-1">
               <a href="#" className="flex items-center px-14 w-full">
