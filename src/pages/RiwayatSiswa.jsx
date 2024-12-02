@@ -1,6 +1,6 @@
 import Sidebar from "../components/Sidebar"
-import { FaRegBell } from "react-icons/fa";
 import { TbLogout } from "react-icons/tb";
+import { Link } from "react-router-dom";
 
 const RiwayatSiswa = () =>{
     return(
@@ -11,8 +11,7 @@ const RiwayatSiswa = () =>{
                     <div className="flex items-center justify-between w-full px-5 border-b-2 pb-3">
                         <h1 className="text-xl font-medium">Muhammad Zidane Maulana</h1>
                         <div className=" flex items-center gap-6">
-                            <FaRegBell size={23} />
-                            <TbLogout size={23} />
+                            <Link to="/loginsiswa"><TbLogout size={23} /></Link>
                         </div>
                     </div>
                     <div className="flex items-center justify-around border-b-4 border-blue-200  w-full bg-white mt-5">

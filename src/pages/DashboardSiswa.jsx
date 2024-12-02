@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
-import { FaRegBell } from "react-icons/fa";
 import { TbLogout } from "react-icons/tb";
 import TableSiswa from "../components/TableSiswaDashboard";
 import InfoSiswa from "../components/InfoPoinSiswa";
 import Sidebar from "../components/Sidebar";
 import BaseURL from "../utils/axios";
+import { Link } from "react-router-dom";
 
 export default function DashboardSiswa() {
   const [data, setData] = useState()
@@ -28,8 +28,7 @@ export default function DashboardSiswa() {
             <div className="flex items-center justify-between w-full px-5 border-b-2 pb-3">
               <h1 className="text-xl font-medium">{data?.nama ?? "Annonymous"}</h1>
               <div className=" flex items-center gap-6">
-                <FaRegBell size={23} />
-                <TbLogout size={23} />
+                <Link to="/loginsiswa"><TbLogout size={23} /></Link>
               </div>
             </div>
             <InfoSiswa/>

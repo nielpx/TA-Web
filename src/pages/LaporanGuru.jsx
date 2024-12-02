@@ -2,6 +2,7 @@
 import { TbLogout } from "react-icons/tb";
 import SidebarGuru from "../components/SidebarGuru";
 import { IoCameraSharp } from "react-icons/io5";
+import { Link } from "react-router-dom";
 //☆*: .｡. o(≧▽≦)o .｡.:*☆
 //
 const LaporanGuru = () =>{
@@ -28,7 +29,7 @@ const LaporanGuru = () =>{
                     <div className="flex items-center justify-between w-full px-5 border-b-2 pb-3">
                         <h1 className="text-xl font-medium">Rr</h1>
                         <div className=" flex items-center gap-6">
-                            <button><TbLogout size={23} /></button>
+                            <Link to="/loginsiswa"><TbLogout size={23} /></Link>
                         </div>
                     </div>
                     <div className="flex align-center justify-center w-full mt-[1%]">

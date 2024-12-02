@@ -3,6 +3,7 @@ import { TbLogout } from "react-icons/tb";
 import BaseURL from "../utils/axios";
 import SidebarGuru from "../components/SidebarGuru";
 import TableGuru from "../components/TableGuruDashboard";
+import { Link } from "react-router-dom";
 
 export default function DashboardGuru() {
   const [data, setData] = useState()
@@ -26,7 +27,7 @@ export default function DashboardGuru() {
             <div className="flex items-center justify-between w-full px-5 border-b-2 pb-3">
               <h1 className="text-xl font-medium">{data?.nama ?? "Annonymous"}</h1>
               <div className=" flex items-center gap-6">
-                <button><TbLogout size={23} /></button>
+                <Link to="/loginsiswa"><TbLogout size={23} /></Link>
               </div>
             </div>
             <div className="flex items-center justify-between border-b-4 border-blue-200  w-full bg-white mt-5">

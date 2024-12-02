@@ -1,9 +1,25 @@
 import Sidebar from "../components/Sidebar";
-import { FaRegBell } from "react-icons/fa";
+import { IoCameraSharp } from "react-icons/io5";
 import { TbLogout } from "react-icons/tb";
+import { Link } from "react-router-dom";
 //☆*: .｡. o(≧▽≦)o .｡.:*☆
 //
 const LaporanSiswa = () => {
+  function previewImage(event) {
+    const file = event.target.files[0];
+    const imagePreview = document.getElementById("imagePreview");
+    const placeholderText = document.getElementById("placeholderText");
+
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        imagePreview.src = e.target.result; // Set the image preview source
+        imagePreview.classList.remove("hidden"); // Show the preview
+        placeholderText.classList.add("hidden"); // Hide the placeholder text
+      };
+      reader.readAsDataURL(file); // Read the file
+    }
+  }
   return (
     <div className="flex items-center justify-center w-full h-screen font-Ubuntu">
       <Sidebar />
@@ -12,8 +28,7 @@ const LaporanSiswa = () => {
           <div className="flex items-center justify-between w-full px-5 border-b-2 pb-3">
             <h1 className="text-xl font-medium">Muhammad Zidane Maulana</h1>
             <div className=" flex items-center gap-6">
-              <FaRegBell size={23} />
-              <TbLogout size={23} />
+              <Link to="/loginsiswa"><TbLogout size={23} /></Link>
             </div>
           </div>
           <div className="flex align-center justify-center w-full mt-[1%]">
@@ -78,11 +93,25 @@ const LaporanSiswa = () => {
                     </select>
                   </td>
                   <td rowSpan={3}>
-                    <input
-                      type="file"
-                      className="w-[320px] py-3 bg-gray rounded-md border h-[200px]"
-                      accept="image/*"
-                    />
+                    <div className="relative w-[320px] h-[200px] bg-gray rounded-md border flex items-center justify-center">
+                        <img 
+                          id="imagePreview" 
+                          className="hidden w-full h-full object-cover" 
+                          alt="Preview" 
+                        />
+                        <div id="placeholderText" className="flex flex-col h-auto w-full items-center justify-center">
+                          <IoCameraSharp size={40}/>
+                          <span className="text-gray-500">
+                            Drop your image here or click to upload
+                          </span>
+                        </div>
+                        <input 
+                          type="file" 
+                          accept="image/*" 
+                          className="absolute inset-0 opacity-0 w-full h-full cursor-pointer" 
+                          onChange={previewImage}
+                        />
+                    </div>
                   </td>
                 </tr>
                 <tr>

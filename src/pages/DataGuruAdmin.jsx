@@ -34,7 +34,7 @@ export default function DataGuruAdmin(){
                     <div className="flex items-center justify-between w-full px-5 border-b-2 pb-3">
                         <h1 className="text-xl font-medium">Admin</h1>
                         <div className=" flex items-center gap-6">                            
-                            <button><TbLogout size={23} /></button>
+                            <Link to="/loginsiswa"><TbLogout size={23} /></Link>
                         </div>
                     </div>
                     <div className="w-full flex py-3 gap-2">

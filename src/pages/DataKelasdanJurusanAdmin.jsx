@@ -1,10 +1,10 @@
 import SidebarAdmin from "../components/SidebarAdmin";
-import { FaRegBell } from "react-icons/fa";
 import { TbLogout } from "react-icons/tb";
 import React, { useState } from "react";
 import { BiSolidEdit } from "react-icons/bi";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { IoIosArrowForward } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 
 export default function DataJurusanDanKelasAdmin(){
@@ -69,7 +69,7 @@ export default function DataJurusanDanKelasAdmin(){
                     <div className="flex items-center justify-between w-full px-5 border-b-2 pb-3">
                         <h1 className="text-xl font-medium">Admin</h1>
                         <div className=" flex items-center gap-6">
-                            <div><TbLogout size={23} /></div>
+                            <Link to="/loginsiswa"><TbLogout size={23} /></Link>
                         </div>
                     </div> 
                     <div className="w-full p-5 overflow-y-scroll h-[85vh] bg-milk-blue">
