@@ -1,15 +1,17 @@
 import { useState, useEffect } from "react";
-import BaseURL from "../utils/axios";
+import apiService from "../utils/apiService";
+import {useAuth} from "../context/AuthContextProvider";
 
 const TableSiswa = () => {
-  const [data, setData] = useState([]); 
-  
- 
+  const {token} = useAuth()
+  const [data, setData] = useState([]);
   
   useEffect(() => {
-    BaseURL.get("siswa/Point").then((response) => {
-      setData(response.data);
-    });
+    apiService.get("Point", {
+      token:token
+    }).then((response) => {
+      setData(response.data)
+    })
   }, []);
 
  

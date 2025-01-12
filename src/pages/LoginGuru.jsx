@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import Logo from '../pictures/40logo+baru+smkn+2+stemdasi+copy+copy.png'
-import { useNavigate } from 'react-router-dom'
-import BaseURL, {BaseUrl} from "../utils/axios"
+import {Link} from 'react-router-dom'
 
 
 
@@ -9,39 +8,8 @@ export default function LoginSiswa(){
     const [kodeGuru, setKodeGuru] = useState('')
     const [kataSandi, setKataSandi] = useState('')
 
-    
-    const navigate = useNavigate()
     const open = () =>{
-        // var nisn = document.getElementById('nisn').value
-        // if (nisn === "") {
-        //     alert("harus di isi")
-        //     return false;
-        // }
-        BaseURL.post("api/Auth/login-guru", {
-            codeGuru: kodeGuru,
-            password: kataSandi
-        })
-        .then(res => {
-            
-            // let sama = false
-            // res.data.forEach(elemen => {
-            //     if (elemen.email.includes(nisn)) {
-            //         return sama = true
-            //     }
-            // });
-            // if(sama){
-            //     navigate('/dashboard')
-            // }else{
-            //     alert("tetot")
-            // }
-            // gak usah gae axios // terus fetch biasa?
-            console.log(res);
-            
-            
-        })
-        .catch(err => {
-            console.log(err)
-        })
+
     }
     return(
         <div>
@@ -59,8 +27,8 @@ export default function LoginSiswa(){
                             <div>
                                 <input type="text" name="" id="Kata-Sandi" placeholder="Kata Sandi" onChange={(e) => setKataSandi(e.target.value)} value={kataSandi} className="w-full p-2 bg-milk-blue rounded-md border-2 focus:outline-none"/>
                             </div>
-                            <button className="w-full bg-strong-blue py-2 text-white font-medium border-2 rounded-md mt-10" onClick={open}>Masuk</button>
-                            <p className="text-gray-500 text-center mt-2">Masuk Sebagai Siswa <span><a href="/loginsiswa" className=" underline decoration-strong-blue text-strong-blue">Mampir disini</a></span></p>
+                            <button className="w-full bg-strong-blue py-2 text-white font-medium border-2 rounded-md mt-10" type="submit">Masuk</button>
+                            <p className="text-gray-500 text-center mt-2">Masuk Sebagai Siswa <span><Link to="/" className=" underline decoration-strong-blue text-strong-blue">Mampir disini</Link></span></p>
                             
                         </div>
                     </div>

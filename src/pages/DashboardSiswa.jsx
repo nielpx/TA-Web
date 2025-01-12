@@ -3,20 +3,21 @@ import { TbLogout } from "react-icons/tb";
 import TableSiswa from "../components/TableSiswaDashboard";
 import InfoSiswa from "../components/InfoPoinSiswa";
 import Sidebar from "../components/Sidebar";
-import BaseURL from "../utils/axios";
 import { Link } from "react-router-dom";
+import apiService from "../utils/apiService";
+import {useAuth} from "../context/AuthContextProvider";
 
 export default function DashboardSiswa() {
+  const {token, key} = useAuth()
   const [data, setData] = useState()
 
   useEffect(() => {
-    BaseURL.get("api/Auth/me")
-      .then((response) => {
-        setData(response.data)        
-      })
-      .catch((e) => {
-
-      })
+    apiService.get("Auth/me", {
+      isBasePath: true,
+      token: token,
+    }).then((response) => {
+      setData(response.data)
+    })
   }, [])
     
   return (

@@ -1,21 +1,18 @@
 import { useState, useEffect } from "react";
-import BaseURL from "../utils/axios";
+import apiService from "../utils/apiService";
+import {useAuth} from "../context/AuthContextProvider";
 
 const TableGuru = () => {
+  const {token} = useAuth()
   const [data, setData] = useState([]); 
-  
- 
-  
-  useEffect(() => {
-    BaseURL.get("siswa/Point").then((response) => {
-      setData(response.data);
-    });
-  }, []);
 
- 
-  // ayo main
-  //ngenteni back front end e mari sek baru back end e tak push
-  //
+  useEffect(() => {
+    apiService.get("Point", {
+      token: token
+    }).then((response) => {
+      setData(response.data)
+    })
+  }, []);
   
   return (
     <div className="w-full bg-white p-5 overflow-y-scroll h-[400px]">

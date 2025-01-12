@@ -1,11 +1,15 @@
 import { useState, useEffect } from "react";
-import BaseURL from "../utils/axios"
+import {useAuth} from "../context/AuthContextProvider";
+import apiService from "../utils/apiService";
 
 const InfoSiswa = () =>{
+  const {token} = useAuth()
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    BaseURL.get("siswa/dashboard").then((response) => {
+    apiService.get("dashboard", {
+      token: token,
+    }).then((response) => {
       setData(response.data)
     })
   }, []);

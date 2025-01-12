@@ -1,21 +1,22 @@
 import { useState, useEffect } from "react";
 import { TbLogout } from "react-icons/tb";
-import BaseURL from "../utils/axios";
 import SidebarGuru from "../components/SidebarGuru";
 import TableGuru from "../components/TableGuruDashboard";
 import { Link } from "react-router-dom";
+import apiService from "../utils/apiService";
+import {useAuth} from "../context/AuthContextProvider";
 
 export default function DashboardGuru() {
+  const {token} = useAuth();
   const [data, setData] = useState()
 
   useEffect(() => {
-    BaseURL.get("api/Auth/me")
-      .then((response) => {
-        setData(response.data)
-      })
-      .catch((e) => {
-
-      })
+    apiService.get("Auth/me", {
+      isBasePath: true,
+      token:token
+    }).then((response) => {
+      setData(response.data)
+    })
   }, [])
     
   return (
