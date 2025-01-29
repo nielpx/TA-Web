@@ -42,7 +42,7 @@ const LaporanSiswa = () => {
                       className="w-[320px] py-3 bg-gray rounded-md border"
                     >
                       <option value="" className="text-font-gray">
-                        Tipe Point
+                        Jurusan
                       </option>
                     </select>
                   </td>
@@ -53,7 +53,7 @@ const LaporanSiswa = () => {
                       className="w-[320px] py-3 bg-gray rounded-md border"
                     >
                       <option value="" className="text-font-gray">
-                        Jurusan
+                        Deskripsi
                       </option>
                     </select>
                   </td>
@@ -64,7 +64,7 @@ const LaporanSiswa = () => {
                       type="number"
                       name=""
                       id=""
-                      placeholder="Point"
+                      placeholder="Kelas"
                       className="w-[320px] py-3 bg-gray rounded-md border placeholder:text-black pl-1"
                     />
                   </td>
@@ -88,7 +88,7 @@ const LaporanSiswa = () => {
                       className="w-[320px] py-3 bg-gray rounded-md border"
                     >
                       <option value="" className="text-font-gray">
-                        Kelas
+                        Nama
                       </option>
                     </select>
                   </td>
@@ -116,26 +116,26 @@ const LaporanSiswa = () => {
                 </tr>
                 <tr>
                   <td>
-                    <input
-                      type="text"
-                      name=""
-                      id=""
-                      placeholder="Deskripsi"
-                      className="w-[320px] py-3 bg-gray rounded-md border pl-1 placeholder:text-black"
-                    />
-                  </td>
-                </tr>
-                <tr>
-                  <td>
                     <select
                       name=""
                       id=""
                       className="w-[320px] py-3 bg-gray rounded-md border"
                     >
                       <option value="" className="text-font-gray">
-                        Nama Point
+                        Tipe Poin
                       </option>
                     </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                        type="number"
+                        name=""
+                        id=""
+                        placeholder="Poin"
+                        className="w-[320px] py-3 bg-gray rounded-md border placeholder:text-black pl-1"
+                      />
                   </td>
                 </tr>
               </table>

@@ -24,7 +24,7 @@ export default function DashboardSiswa() {
     <div>
       <div className="flex h-screen w-full font-Ubuntu">
         <Sidebar/>
-        <div className="h-screen w-full bg-milk-blue">
+        <div className="h-screen w-[100%] bg-milk-blue">
           <div className="p-9">
             <div className="flex items-center justify-between w-full px-5 border-b-2 pb-3">
               <h1 className="text-xl font-medium">{data?.nama ?? "Annonymous"}</h1>

@@ -38,8 +38,8 @@ const InfoSiswa = () =>{
               </div>
               <div className="p-3 px-8 bg-white rounded-3xl w-full shadow-[0px_-8px_2px_1px_rgba(66,109,235)] flex-1">
                 <p>Hasil Akhir</p>
-                <div className="text-center p-7">
-                  <h1 className="font-bold text-5xl text-strong-blue">{data?.hasilAkhir ?? 0}</h1>
+                <div className="p-7">
+                  <h1 className="font-bold text-5xl text-center text-strong-blue">{data?.hasilAkhir ?? 0}</h1>
                 </div>
             </div>
         </div>

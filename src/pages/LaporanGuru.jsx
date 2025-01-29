@@ -27,7 +27,7 @@ const LaporanGuru = () =>{
             <div className="h-screen w-full bg-milk-blue">
                 <div className="p-9">
                     <div className="flex items-center justify-between w-full px-5 border-b-2 pb-3">
-                        <h1 className="text-xl font-medium">Rr</h1>
+                        <h1 className="text-xl font-medium">Tesese</h1>
                         <div className=" flex items-center gap-6">
                             <Link to="/loginsiswa"><TbLogout size={23} /></Link>
                         </div>

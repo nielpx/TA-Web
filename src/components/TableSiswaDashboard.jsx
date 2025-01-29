@@ -35,8 +35,12 @@ const TableSiswa = () => {
                   Di Setujui Oleh {item.namaGuru}
                 </span>
               </td>
-              <td>
-                {item.typePoint != "Point Keburukan"
+              <td
+                className={`text-end ${
+                item.typePoint !== "Point Keburukan" ? "text-green-500" : "text-red-500"
+                }`}
+              >
+                {item.typePoint !== "Point Keburukan"
                   ? "+" + item.point
                   : "-" + item.point}
               </td>
